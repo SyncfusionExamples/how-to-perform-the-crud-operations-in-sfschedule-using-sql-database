@@ -1,0 +1,34 @@
+﻿<Window
+    x:Class="ScheduleSample.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ScheduleSample"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    Title="MainWindow"
+    mc:Ignorable="d">
+
+    <syncfusion:SfSchedule
+            x:Name="schedule" 
+            ItemsSource="{Binding Meetings }"
+            ScheduleType="Week"
+            AllowEditing="True"
+            TimeInterval="OneHour">
+        <syncfusion:SfSchedule.AppointmentMapping>
+            <syncfusion:ScheduleAppointmentMapping
+                NotesMapping="AppointmentID"
+                IsRecursiveMapping="MappedIsRecursive" 
+                    AppointmentBackgroundMapping="MappedColor"
+                    EndTimeMapping="MappedEndTime" 
+                RecurrenceProperitesMapping="MappedRecurrenceProperties"
+                RecurrenceRuleMapping="MappedRecurrenceRule"
+                AllDayMapping="MappedIsAllDay"
+                    StartTimeMapping="MappedStartTime" 
+                    SubjectMapping="MappedSubject" />
+        </syncfusion:SfSchedule.AppointmentMapping>
+        <syncfusion:SfSchedule.DataContext>
+            <local:ScheduleViewModel x:Name="scheduleViewModel"/>
+        </syncfusion:SfSchedule.DataContext>
+    </syncfusion:SfSchedule>
+</Window>

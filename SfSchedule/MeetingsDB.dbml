@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Meetings_DB" Class="MeetingsDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SYNCLAPN13979\SQLSERVER2017;Initial Catalog=Meetings_DB;Integrated Security=True" SettingsObjectName="ScheduleSample.Properties.Settings" SettingsPropertyName="Meetings_DBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Meeting_Table" Member="Meeting_Tables">
+    <Type Name="Meeting_Table">
+      <Column Name="Subject" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="StartTime" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsAllDay" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Color" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
